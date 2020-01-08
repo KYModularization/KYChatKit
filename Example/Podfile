@@ -1,0 +1,6 @@
+use_frameworks!
+target 'KYChatKit_Tests' do
+  pod 'KYChatKit', :path => '../'
+  
+  
+end
