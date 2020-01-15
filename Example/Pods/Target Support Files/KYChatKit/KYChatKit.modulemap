@@ -1,0 +1,6 @@
+framework module KYChatKit {
+  umbrella header "KYChatKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

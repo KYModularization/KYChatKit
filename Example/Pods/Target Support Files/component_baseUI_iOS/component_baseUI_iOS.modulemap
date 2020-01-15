@@ -1,0 +1,6 @@
+framework module component_baseUI_iOS {
+  umbrella header "component_baseUI_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

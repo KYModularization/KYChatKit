@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KYChatKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of KYChatKit.'
+  s.version          = '0.0.2'
+  s.summary          = '腾讯im'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -36,7 +36,15 @@ TODO: Add long description of the pod here.
   #   'KYChatKit' => ['KYChatKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#  s.public_header_files = ' ‘Pod/Classes/* * /* * /*.h'
+  s.frameworks = 'UIKit', 'AVFoundation'
+   s.dependency 'component_baseUI_iOS', '~> 0.0.1'
+   s.dependency 'KYCommonKit', '~> 0.0.3'
+   s.dependency 'JPush', '~> 3.1.0'
+   s.pod_target_xcconfig = {
+     'FRAMEWORK_SEARCH_PATHS' => '$(inherited)
+     $(PODS_ROOT)/libjpush-ios-3.1.2',
+     'OTHER_LDFLAGS'          => '$(inherited) -undefined
+   dynamic_lookup'
+   }
 end

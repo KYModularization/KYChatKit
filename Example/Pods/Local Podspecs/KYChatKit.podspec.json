@@ -1,0 +1,41 @@
+{
+  "name": "KYChatKit",
+  "version": "0.0.1",
+  "summary": "腾讯im",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/liangyujuan/KYChatKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liangyujuan": "18730231873@163.com"
+  },
+  "source": {
+    "git": "https://github.com/liangyujuan/KYChatKit.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KYChatKit/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "AVFoundation"
+  ],
+  "dependencies": {
+    "component_baseUI_iOS": [
+      "~> 0.0.1"
+    ],
+    "KYCommonKit": [
+      "~> 0.0.3"
+    ],
+    "JPush": [
+      "~> 3.1.0"
+    ]
+  },
+  "pod_target_xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "$(inherited)\n     $(PODS_ROOT)/libjpush-ios-3.1.2",
+    "OTHER_LDFLAGS": "$(inherited) -undefined\n   dynamic_lookup"
+  }
+}

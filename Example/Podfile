@@ -1,6 +1,17 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/liangyujuan/KYModulSpecs.git'
 use_frameworks!
 target 'KYChatKit_Tests' do
   pod 'KYChatKit', :path => '../'
+  pod 'TXIMSDK_iOS' , '~> 4.6.58'
+#  pod 'component_baseUI_iOS', '~> 0.0.1'
+#  pod 'KYCommonKit', '~> 0.0.1'
+#  pod 'JPush', '~> 3.1.0'
   
-  
+  #在最后面添加如下内容：
+  pre_install do |installer|
+      # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289 问题在这里有讨论
+      Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+  end
 end
+

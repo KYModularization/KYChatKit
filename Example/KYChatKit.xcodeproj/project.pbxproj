@@ -17,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		190CC03031C8CEFCE74DB283 /* Pods_KYChatKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYChatKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCA69C423C71D3300FDE5BC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -26,11 +27,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6F558F5AEAC68847A926DFA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A23A5B108778A4DC6D1F45BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6F558F5AEAC68847A926DFA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A23A5B108778A4DC6D1F45BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CE252924A2695605D1C2E0C7 /* Pods-KYChatKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYChatKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-KYChatKit_Tests/Pods-KYChatKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2AE4240FAA90A6B0CB3AF70 /* Pods-KYChatKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KYChatKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-KYChatKit_Tests/Pods-KYChatKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D98564E36B312352E11EC91D /* KYChatKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = KYChatKit.podspec; path = ../KYChatKit.podspec; sourceTree = "<group>"; };
+		D98564E36B312352E11EC91D /* KYChatKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KYChatKit.podspec; path = ../KYChatKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 				D98564E36B312352E11EC91D /* KYChatKit.podspec */,
 				A23A5B108778A4DC6D1F45BF /* README.md */,
 				6F558F5AEAC68847A926DFA9 /* LICENSE */,
+				1DCA69C423C71D3300FDE5BC /* PrefixHeader.pch */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -114,7 +116,6 @@
 				CE252924A2695605D1C2E0C7 /* Pods-KYChatKit_Tests.debug.xcconfig */,
 				D2AE4240FAA90A6B0CB3AF70 /* Pods-KYChatKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,6 +161,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -193,10 +195,20 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KYChatKit_Tests/Pods-KYChatKit_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KYChatKit/KYChatKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/component_baseUI_iOS/component_baseUI_iOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYChatKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/component_baseUI_iOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -327,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE252924A2695605D1C2E0C7 /* Pods-KYChatKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -338,11 +351,19 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Private\"",
+					"\"${PODS_ROOT}/Headers/Private/KYCommonKit\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/KYCommonKit\"",
+				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KYChatKit_Example.app/KYChatKit_Example";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -351,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2AE4240FAA90A6B0CB3AF70 /* Pods-KYChatKit_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -363,6 +385,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KYChatKit_Example.app/KYChatKit_Example";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
